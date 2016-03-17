@@ -1,0 +1,24 @@
+body{
+background-image: url('http://1.bp.blogspot.com/-CYQ5F9q6YlE/VIX6zgIg8EI/AAAAAAAAGwU/nkOudSDpI18/s1600/website-background-rough-surface.jpg');
+}
+
+p{
+
+border-radius: 10px;
+width: 100px;
+height: 100px;
+padding: 50px;
+
+
+}
+
+#rc1{
+background-color: lime;
+box-shadow: 5px 5px 3px #333;
+}
+
+#rc2{
+
+background-image: url("http://static2.grsites.com/archive/textures/pink/pink134.jpg");
+
+}

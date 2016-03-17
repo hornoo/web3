@@ -1,0 +1,17 @@
+
+
+li{
+	
+	background-image: url('images/checkmark.png');
+	background-repeat: no-repeat;
+	line-height: 36px;
+	padding: 0px 0px 0px 36px;
+	
+	
+}
+
+ul{
+	
+	list-style: none;
+	
+}

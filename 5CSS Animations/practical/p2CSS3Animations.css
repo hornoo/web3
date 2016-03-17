@@ -1,0 +1,93 @@
+
+
+#wrapper{
+	margin: auto;
+	width: 800px;
+}
+
+div{
+	margin: 50px;
+}
+
+#transformDemo{
+	width:100px;
+	height: 100px;
+	border: black solid thin;
+	background-color: lime;
+}
+
+#transformDemo:hover{
+	transform: skew(20deg, 45deg);
+	transition: 4s;
+}
+
+#multipleTransition{
+	width:100px;
+	height: 100px;
+	border: black solid thin;
+	background-color: lime;
+}
+
+#multipleTransition:hover{
+	
+	transform:scale(1.5,1.5);
+	background-color:purple;
+	border-radius: 100px;
+	transition: 4s;
+}
+
+#textAnimation{
+	width: 170px;
+	transform: rotate(-360deg);
+	transition: 4s;
+}
+#textAnimation:hover{
+	
+	color: orange;
+	transform: rotate(360deg);
+	transition: 4s;
+	font-size: 40px;
+	width:250px;
+}
+
+#delayDemo{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin: 200px;
+}
+
+#delayDemo div{
+	position: absolute;
+	width:100px;
+	height: 100px;
+	background-color: red;
+	border-radius: 50px;
+	top: 0px;
+	left: 0px;
+	transition: all 4s ease-in-out 0s;
+}
+
+#delayDemo:hover #delayDemo1{
+	transform: translate(-100px, -100px);
+	transition-delay: 0s;
+	background-color: green;
+}
+#delayDemo:hover #delayDemo2{
+	transform: translate(100px, -100px);
+	transition-delay: 1s;
+	background-color: blue;
+}
+#delayDemo:hover #delayDemo3{
+	transform: translate(100px, 100px);
+	transition-delay: 2s;
+	background-color: cornflowerblue;
+}
+#delayDemo:hover #delayDemo4{
+	transform: translate(-100px, 100px);
+	transition-delay: 4s;
+	background-color: goldenrod;
+}
+
+
+

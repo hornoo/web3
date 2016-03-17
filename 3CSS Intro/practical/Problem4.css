@@ -1,0 +1,35 @@
+.horizontalNavigation{
+	
+}
+
+ul li{
+	display: inline;
+}
+
+.next{
+ border: none;
+}
+
+.prev{
+
+border: none;
+
+}
+
+
+ul li a:hover{
+
+	color:white;
+	background-color: brown; 
+
+}
+
+ul li a{
+	
+	list-style: none;
+	color: brown;
+	text-decoration: none;
+	border: thin solid brown;
+	padding: 0px 5px 0px 5px;
+	
+}

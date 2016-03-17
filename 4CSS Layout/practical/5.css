@@ -1,0 +1,13 @@
+.box1{	
+	background-color: orange;	
+}
+
+.image{
+	width: 200px;
+	height: 150px;
+}
+
+figure{
+	position:relative;
+	left: 30%;
+}

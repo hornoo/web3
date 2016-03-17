@@ -1,0 +1,24 @@
+ul{
+	background-color: rgb(102,150,119);
+	list-style-type: none;
+	width: 150px;
+	padding: 0
+}
+
+ul li{
+	border: black thin solid;
+	padding: 10px;
+}
+
+ul li a{
+	
+	list-style: none;
+	color: white;
+	text-decoration: none;
+}
+
+ul :hover {
+	background-color: pink;
+}
+
+

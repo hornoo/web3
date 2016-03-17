@@ -1,0 +1,47 @@
+
+
+#divProb1 div{
+
+	border: solid black thin;
+	border-radius: 10px;
+	text-align: center;
+	padding-bottom: 50px;
+	padding-top: 2px;
+	box-shadow: 5px 5px 3px #333;
+	margin-top: 6px;
+	width: 30%;
+
+}
+
+#divOne{
+	
+	background-color: black;
+	color: white;
+	
+}
+
+#divTwo{
+	
+	background-color: darkblue;
+	color: white;
+	
+	
+}
+
+#divThree{
+	
+	background-color: #ff0000;
+	
+}
+
+#divFour{
+	
+	background-color: #00FF00;
+	
+}
+
+#divFive{
+	
+	background-color: #00FFFF;
+	
+}

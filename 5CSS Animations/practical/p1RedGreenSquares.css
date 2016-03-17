@@ -1,0 +1,21 @@
+div{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+
+#greenRectangle{
+	background-color: green;
+	
+}
+
+#redRectangle{
+	background-color:red;
+	
+
+}
+
+#redRectangle:active{
+transform: translate(250px, 25px) rotate(60deg);
+transition: 2s;
+}

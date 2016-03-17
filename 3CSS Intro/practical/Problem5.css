@@ -1,0 +1,29 @@
+div{
+
+padding: 50px;
+width: 100px;
+height: 100px;
+margin: 20px;
+
+}
+
+.box1{
+
+	border: solid 5px black;
+	background-color: orange;
+
+}
+
+.box2{
+
+	border: dotted 5px red;
+	background-color: green;
+	font-family: sans-serif;
+}
+
+.box3{
+
+	border: dashed 5px yellow;
+	background-color: blue;
+	color: white;
+}
