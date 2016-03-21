@@ -1,0 +1,58 @@
+
+
+img
+{
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+header
+{
+	background-color: #7BA0C3;
+	color: #35608A;
+	padding: 10px;
+	
+}
+
+header h1
+{
+	background-color: #FFBA99;
+	text-align: center;
+	padding: 20px;
+}
+
+section
+{
+	background-color: #202020;
+	color: #90907A;
+	padding: 10px;
+	
+}
+
+article h3{
+	background-color: #DBE8F5;
+	color: #526B83;
+	padding: 10px;
+	text-align: center;
+}
+
+article h3:hover
+{
+	background-color: #FFBA99;
+	color: #90907A;
+}
+
+
+section strong{
+	color: #D57547;
+}
+
+html body
+{
+	background-color: #ABC6E0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+#http://paletton.com/#uid=33-0u0kcLFy3GXl89PKhevnlmqG
