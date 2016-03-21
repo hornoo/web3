@@ -1,7 +1,4 @@
-div
-{
-	/*border: thin black solid;*/
-}
+
 
 img
 {
@@ -33,11 +30,18 @@ section
 }
 
 article h3{
-	background-color: #FFBA99;
+	background-color: #DBE8F5;
 	color: #526B83;
 	padding: 10px;
 	text-align: center;
 }
+
+article h3:hover
+{
+	background-color: #FFBA99;
+	color: #90907A;
+}
+
 
 section strong{
 	color: #D57547;
@@ -47,6 +51,7 @@ html body
 {
 	background-color: #ABC6E0;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 
