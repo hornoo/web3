@@ -29,11 +29,25 @@ section
 	
 }
 
+article{
+	padding: 15px;
+}
+
 article h3{
 	background-color: #DBE8F5;
 	color: #526B83;
 	padding: 10px;
 	text-align: center;
+	
+}
+
+article:hover{
+	transition: 2s;
+	transform:scale(1.1,1.1);
+	background-color: #202020;
+	z-index: 3;
+	position: relative;
+
 }
 
 article h3:hover
@@ -52,6 +66,93 @@ html body
 	background-color: #ABC6E0;
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+
+#hireMeAni{
+	
+	position: relative;
+	-webkit-animation : animateBinary 40s infinite;
+}
+
+.hidenBackGround
+{
+	
+}
+
+.contactDetails
+{
+	background-color: #ABC6E0;
+	width: 100%;
+	padding: 10px;
+	width:60%;
+	float: left;
+	position: relative;
+	z-index:1;
+	
+	
+}
+
+.hiddenContent{
+background-color: #FFBA99;
+left: 25px;
+position:absolute;
+width: 60%;
+-webkit-transition: all 0.5s ease-in-out;
+
+z-index:0;
+}
+
+.hiddenContent:hover {
+	
+left: 20%;	
+-webkit-transition: all 0.5s ease-in-out;
+	
+}
+
+.hiddenContent img{
+	width: 32px;
+	height: 32px;
+	display: block;
+	margin: 3px;
+	left: 70%;
+	position: relative;
+}
+
+.glyphRight{
+	float:right;
+}
+
+.spacer{
+	clear:both;
+}
+
+
+
+
+
+
+
+@-webkit-keyframes animateBinary
+{
+	0%{
+		
+		left: 0%;
+		
+	}
+
+	50% {
+		left: 61%;
+	
+	}
+	
+	
+	100%{
+		left :0%;	
+		
+	}
+	
+
 }
 
 
