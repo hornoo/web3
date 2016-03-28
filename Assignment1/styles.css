@@ -29,11 +29,13 @@ section
 	
 }
 
-article{
+article
+{
 	padding: 15px;
 }
 
-article h3{
+article h3
+{
 	background-color: #DBE8F5;
 	color: #526B83;
 	padding: 10px;
@@ -41,7 +43,8 @@ article h3{
 	
 }
 
-article:hover{
+article:hover
+{
 	transition: 2s;
 	transform:scale(1.1,1.1);
 	background-color: #202020;
@@ -57,7 +60,8 @@ article h3:hover
 }
 
 
-section strong{
+section strong
+{
 	color: #D57547;
 }
 
@@ -69,23 +73,19 @@ html body
 }
 
 
-#hireMeAni{
-	
+#hireMeAni
+{
 	position: relative;
 	-webkit-animation : animateBinary 40s infinite;
 }
 
-.hidenBackGround
-{
-	
-}
 
 .contactDetails
 {
 	background-color: #ABC6E0;
 	width: 100%;
 	padding: 10px;
-	width:60%;
+	width:70%;
 	float: left;
 	position: relative;
 	z-index:1;
@@ -94,19 +94,18 @@ html body
 }
 
 .hiddenContent{
-background-color: #FFBA99;
-left: 25px;
-position:absolute;
-width: 60%;
--webkit-transition: all 0.5s ease-in-out;
-
-z-index:0;
+	background-color: #FFBA99;
+	left: 25px;
+	position:absolute;
+	width: 65%;
+	-webkit-transition: all 0.5s ease-in-out;
+	z-index:0;
 }
 
 .hiddenContent:hover {
 	
-left: 20%;	
--webkit-transition: all 0.5s ease-in-out;
+	left: 25%;	
+	transition: all 0.5s ease-in-out;
 	
 }
 
@@ -119,6 +118,9 @@ left: 20%;
 	position: relative;
 }
 
+.hiddenContent a{
+	width: 32px;
+}
 .glyphRight{
 	float:right;
 }
@@ -126,10 +128,6 @@ left: 20%;
 .spacer{
 	clear:both;
 }
-
-
-
-
 
 
 
