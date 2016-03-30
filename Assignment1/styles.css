@@ -1,18 +1,11 @@
 
 
-img
+.profilePic 
 {
 	width: 100%;
 	margin-bottom: 25px;
 }
 
-header
-{
-	background-color: #7BA0C3;
-	color: #35608A;
-	padding: 10px;
-	
-}
 
 header h1
 {
@@ -22,11 +15,9 @@ header h1
 }
 
 section
-{
-	background-color: #202020;
+{	
 	color: #90907A;
 	padding: 10px;
-	
 }
 
 article
@@ -60,7 +51,7 @@ article h3:hover
 }
 
 
-section strong
+article strong
 {
 	color: #D57547;
 }
@@ -97,14 +88,14 @@ html body
 	background-color: #FFBA99;
 	left: 25px;
 	position:absolute;
-	width: 65%;
+	width: 70%;
 	-webkit-transition: all 0.5s ease-in-out;
 	z-index:0;
 }
 
 .hiddenContent:hover {
 	
-	left: 25%;	
+	left: 20%;	
 	transition: all 0.5s ease-in-out;
 	
 }
