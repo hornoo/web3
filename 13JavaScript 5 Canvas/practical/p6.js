@@ -1,6 +1,8 @@
  
 var mainCanvis;
 var mainContext; 
+var eathImage = new Image();
+earthImage.src = "earth.png";
 
 
 function init()
@@ -18,11 +20,13 @@ function animateWorld()
 {
 	
 	
+	
+	
 }
 
 function drawSun()
 {
-	var grd = mainContext.createRadialGradient(100, 50, 5, 90, 60, 100);
+	var grd = mainContext.createRadialGradient(180, 180, 15, 180, 180, 140);
 	grd.addColorStop(0, "yellow");
 	grd.addColorStop(1, "black");
 	mainContext.fillStyle = grd;
