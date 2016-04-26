@@ -23,7 +23,7 @@ function processOrder() {
     var stateDropDownValue = $('#s-state');
     var emailInput = $('#email');
     var shipping = $('input:radio[name=r_method]:checked').val();
-    var bottleCount = 0;
+    var totalbottleCount = 0;
     var total = 0;
     var shipping = 0;
 
@@ -42,15 +42,21 @@ function processOrder() {
         $('#cart-wine > .item').each(function(index, currentElement)
         {
 
-            /*console.log($('span').html());
-            console.log($('text').val());
-              */
             var currentPrice = $(currentElement).find('span').text();
-
+            var bottleCount = parseInt($(currentElement).find('input').val(),10);
             currentPrice = currentPrice.match(/[\d]+/);
 
-            console.log(currentPrice[0]);
+            currentPrice = parseInt(currentPrice[0],10);
+
+            if(!isNaN(bottleCount)) {
+                totalbottleCount += bottleCount;
+                total += (bottleCount * currentPrice);
+            }
+
         });
+
+        console.log(totalbottleCount);
+        console.log(total);
     }
 
 
@@ -72,11 +78,8 @@ function validateEmail(emailAddress)
 }
 
 
-
-
 function TextFieldInputOk(inputField)
 {
-
     if(inputField.val() == "")
     {
 
