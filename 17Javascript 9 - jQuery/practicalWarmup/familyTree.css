@@ -1,0 +1,30 @@
+/* Some simple visual styles to illustrate what elements have been selected */
+
+
+body, h4
+{
+	font-family: Calibri;
+	margin:5px;
+}
+
+.standout
+{
+	background: papayawhip;
+	color: red;
+}
+
+.loudBorder
+{
+	border: 2px solid red;
+}
+
+.fancy
+{
+	font-style : italic;
+	color: green;
+}
+
+span
+{
+	padding: 0px 5px;
+}

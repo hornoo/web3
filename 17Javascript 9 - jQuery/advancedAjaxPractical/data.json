@@ -1,0 +1,42 @@
+[
+  {
+    "name":"paella",
+    "description":"Valencian rice dish with ancient roots that originated in its modern form in the mid-19th century near Albufera lagoon on the east coast of Spain adjacent to the city of Valencia. The dish is widely regarded as Spain's national dish, as well as a regional Valencian dish; Valencians regard paella as one of their identifying symbols."
+  },
+  {
+    "name":"sushi",
+    "description":"Food preparation originating in Japan, consisting of cooked vinegared rice combined with other ingredients such as raw uncooked seafood, vegetables and sometimes tropical fruits. Ingredients and forms of sushi presentation vary widely, but the ingredient which all sushi have in common is rice."
+  },
+    {
+    "name":"laksa",
+    "description":"Popular spicy noodle soup in the Peranakan cuisine,which is a combination of Chinese and Malay cuisine. Laksa consists of rice noodles or rice vermicelli with chicken, prawn or fish, served in spicy soup; either based on rich and spicy curry coconut milk, or based on sour asam (tamarind or gelugur). It can be found in Malaysia, Singapore, Indonesia and Southern Thailand."
+  }, 
+
+    {
+    "name":"baklava",
+    "description":"A rich, sweet pastry made of layers of filo filled with chopped nuts and sweetened and held together with syrup or honey. It is characteristic of the cuisines of the former Ottoman Empire, and is also found in Central and West Asia."
+  },
+
+    {
+    "name":"arepa",
+    "description":"A type of food made of ground maize dough or cooked flour prominent in the cuisine of Colombia and Venezuela. It is eaten daily in those countries and can be served with various accompaniments such as cheese (cuajada), avocado, or (especially in Venezuela) split and used to make sandwiches."
+  },
+  
+    {
+    "name":"hamburguer",
+    "description":"A hamburger (also called a beef burger, hamburger sandwich, burger, hamburg or cheeseburger when served with a slice of cheese) is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. Hamburgers are often served with cheese, lettuce, tomato, bacon, onion, pickles, and condiments such as mustard, mayonnaise, ketchup, relish, and chiles."
+  },
+  
+      {
+    "name":"pizza",
+    "description":"Pizza is a flatbread generally topped with tomato sauce and cheese and baked in an oven. It is commonly topped with a selection of meats, vegetables and condiments. The term was first recorded in the 10th century, in a Latin manuscript from Gaeta in Central Italy. The modern pizza was invented in Naples, Italy, and the dish and its variants have since become popular in many areas of the world."
+  },
+  
+    {
+    "name":"falafel",
+    "description":"A deep-fried ball or patty made from ground chickpeas, fava beans, or both. Falafel is a traditional Middle Eastern food, commonly served in a pita, which acts as a pocket, or wrapped in a flatbread known as lafa; It  also frequently refers to a wrapped sandwich that is prepared in this way. The falafel balls are topped with salads, pickled vegetables, hot sauce, and drizzled with tahini-based sauces."
+  }
+  
+
+  
+]
