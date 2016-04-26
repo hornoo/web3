@@ -1,14 +1,92 @@
 //your code for Assignment 2 goes here
 
+var emailRegex = /.+@.+\..+/;
+
+
+
 $(document).ready(function(){
 
+    $('form').on("submit", function (e) {
 
-    $('btn-estimate').on("click", processOrder);
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        processOrder();
+    })
+
+
 
 });
 
+
 function processOrder() {
 
-    return true;
+    var stateDropDownValue = $('#s-state');
+    var emailInput = $('#email');
+    var shipping = $('input:radio[name=r_method]:checked').val();
+    var bottleCount = 0;
+    var total = 0;
+    var shipping = 0;
+
+    $('#cart-wine > .item');
+
+    if(!TextFieldInputOk(stateDropDownValue))
+    {
+        alert("Please choose your shipping State.")
+        return false;
+    }else if(!validateEmail(emailInput))
+    {
+        alert("Please enter a valid E-mail Address.");
+        return false;
+    } else
+    {
+        $('#cart-wine > .item').each(function(index, currentElement)
+        {
+
+            /*console.log($('span').html());
+            console.log($('text').val());
+              */
+            var currentPrice = $(currentElement).find('span').text();
+
+            currentPrice = currentPrice.match(/[\d]+/);
+
+            console.log(currentPrice[0]);
+        });
+    }
+
+
+
+
+}
+
+
+function validateEmail(emailAddress)
+{
+    if(emailRegex.test(emailAddress.val()))
+    {
+        return true;
+    }else
+    {
+        emailAddress.focus();
+        return false;
+    }
+}
+
+
+
+
+function TextFieldInputOk(inputField)
+{
+
+    if(inputField.val() == "")
+    {
+
+        inputField.focus();
+        return false;
+
+    }
+    else
+    {
+        return true;
+    }
 
 }
