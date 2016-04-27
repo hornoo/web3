@@ -33,7 +33,7 @@ function processOrderFields() {
 
     if(!TextFieldInputOk(stateDropDownElement))
     {
-        alert("Please choose your shipping State.")
+        alert("Please choose your shipping State.");
         return false;
     }else if(!validateEmail(emailInput))
     {
@@ -46,7 +46,7 @@ function processOrderFields() {
 
             var bottleCount = parseInt($(currentElement).find('input').val(),10);
 
-            var currentPrice = getNumericValueFromSelectedElement($(currentElement).find('span'))
+            var currentPrice = getNumericValueFromSelectedElement($(currentElement).find('span'));
 
             if(!isNaN(bottleCount)) {
                 totalBottleCount += bottleCount;
@@ -83,10 +83,15 @@ function calculateTotal(bottleCount, shippingElement, tax, taxState, totalExTax 
 
     var estimateTotal = totalExTax + totalShippingValue + (totalExTax * tax);
 
-    console.log(estimateTotal);
-    console.log(totalBottlesString);
-    console.log(totalShippingString);
-    console.log(taxString);
+    estimateTotal = estimateTotal.toLocaleString('nzu',{ style: 'currency', currency: 'USD' });
+
+    var results = $('#results');
+
+    results.empty();
+
+    results.append( totalBottlesString + "<br>"  + totalShippingString + "<br>" + taxString);
+
+    $('#txt-estimate').val(estimateTotal);
 }
 
 
