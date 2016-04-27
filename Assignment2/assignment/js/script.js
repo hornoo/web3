@@ -1,8 +1,10 @@
 //your code for Assignment 2 goes here
 
 var emailRegex = /.+@.+\..+/;
-
-
+var taxjsonLocation = "https://dl.dropboxusercontent.com/u/10089854/Web3/Assignment2/stateTaxInfo.json";
+var taxRate = 0;
+var totalBottleCount = 0;
+var total = 0;
 
 $(document).ready(function(){
 
@@ -10,7 +12,7 @@ $(document).ready(function(){
 
         e.preventDefault();
         e.stopImmediatePropagation();
-        processOrder();
+        processOrderFields();
     })
 
 
@@ -18,16 +20,14 @@ $(document).ready(function(){
 });
 
 
-function processOrder() {
+function processOrderFields() {
 
     var stateDropDownValue = $('#s-state');
     var emailInput = $('#email');
-    var shipping = $('input:radio[name=r_method]:checked').val();
-    var totalbottleCount = 0;
-    var total = 0;
-    var shipping = 0;
+    var shippingType = $('input:radio[name=r_method]:checked').val();
+    totalBottleCount = 0;
+    total = 0;
 
-    $('#cart-wine > .item');
 
     if(!TextFieldInputOk(stateDropDownValue))
     {
@@ -49,18 +49,38 @@ function processOrder() {
             currentPrice = parseInt(currentPrice[0],10);
 
             if(!isNaN(bottleCount)) {
-                totalbottleCount += bottleCount;
+                totalBottleCount += bottleCount;
                 total += (bottleCount * currentPrice);
             }
 
         });
 
-        console.log(totalbottleCount);
+        console.log(totalBottleCount);
         console.log(total);
+
+        $.when(getTax(taxjsonLocation,stateDropDownValue.val())).done(function()
+        {
+            console.log(taxRate);
+
+        });
     }
 
 
+}
 
+
+function getTax(jsonAddress, taxLocation) {
+
+
+    return $.getJSON({url:jsonAddress, success: function(taxRates)
+            {
+                taxRate = taxRates[taxLocation];
+
+            }, error: function(xhr,status,error) {
+
+                alert("There was a issue contacting the server to get the correct tax rate, please try again later. Status: " + status);
+            }
+            });
 
 }
 
