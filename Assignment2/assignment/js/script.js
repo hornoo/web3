@@ -2,9 +2,8 @@
 
 var emailRegex = /.+@.+\..+/;
 var taxjsonLocation = "https://dl.dropboxusercontent.com/u/10089854/Web3/Assignment2/stateTaxInfo.json";
-var taxRate = 0;
-var totalBottleCount = 0;
-var total = 0;
+
+
 
 $(document).ready(function(){
 
@@ -25,8 +24,9 @@ function processOrderFields() {
     var stateDropDownValue = $('#s-state');
     var emailInput = $('#email');
     var shippingType = $('input:radio[name=r_method]:checked').val();
-    totalBottleCount = 0;
-    total = 0;
+    var totalBottleCount = 0;
+    var total = 0;
+    var taxRate = 0;
 
 
     if(!TextFieldInputOk(stateDropDownValue))
@@ -42,11 +42,10 @@ function processOrderFields() {
         $('#cart-wine > .item').each(function(index, currentElement)
         {
 
-            var currentPrice = $(currentElement).find('span').text();
-            var bottleCount = parseInt($(currentElement).find('input').val(),10);
-            currentPrice = currentPrice.match(/[\d]+/);
 
-            currentPrice = parseInt(currentPrice[0],10);
+            var bottleCount = parseInt($(currentElement).find('input').val(),10);
+
+            var currentPrice = getNumericValueFromSelectedElement($(currentElement).find('span'))
 
             if(!isNaN(bottleCount)) {
                 totalBottleCount += bottleCount;
@@ -68,6 +67,27 @@ function processOrderFields() {
 
 }
 
+function calculateTotal(bottleCount, shippingType, tax, totalExTax ) {
+
+
+    var totalBottles = "Total Bottles: " + bottleCount;
+    var shippingCostPerBottle = 0;
+    var totalShipping = "TotalShipping: " + (bottleCount * 1);
+
+}
+
+
+function getNumericValueFromSelectedElement(inputElement)
+{
+    var extractedNumber = inputElement.text();
+
+        extractedNumber = extractedNumber.match(/[\d]+/);
+
+        extractedNumber = parseInt(extractedNumber[0],10);
+
+
+    return extractedNumber;
+}
 
 function getTax(jsonAddress, taxLocation) {
 
