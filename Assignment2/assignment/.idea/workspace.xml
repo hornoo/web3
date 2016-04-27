@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ee2c4e1-1495-4d23-a855-b5f134888819" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
     </list>
     <ignored path="assignment.iws" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="79" column="43" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="43" />
+            <state relative-caret-position="221">
+              <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -219,12 +218,12 @@
       <option name="presentableId" value="Default" />
       <updated>1461637685174</updated>
       <workItem from="1461637694730" duration="15849000" />
-      <workItem from="1461710377114" duration="7593000" />
+      <workItem from="1461710377114" duration="8483000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23442000" />
+    <option name="totallyTimeSpent" value="24332000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1032" y="126" width="1040" height="744" extended-state="6" />
@@ -282,8 +281,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="79" column="43" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="43" />
+        <state relative-caret-position="221">
+          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="62" />
           <folding />
         </state>
       </provider>

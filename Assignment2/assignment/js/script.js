@@ -1,8 +1,8 @@
 //your code for Assignment 2 goes here
 
 var emailRegex = /.+@.+\..+/;
-var taxjsonLocation = "https://dl.dropboxusercontent.com/u/10089854/Web3/Assignment2/stateTaxInfo.json";
-
+var taxJsonLocation = "https://dl.dropboxusercontent.com/u/10089854/Web3/Assignment2/stateTaxInfo.json";
+var taxRate = 0;
 
 
 $(document).ready(function(){
@@ -23,7 +23,7 @@ function processOrderFields() {
 
     var stateDropDownValue = $('#s-state');
     var emailInput = $('#email');
-    var shippingType = $('input:radio[name=r_method]:checked').val();
+    var shippingType = $('input:radio[name=r_method]:checked').next();
     var totalBottleCount = 0;
     var total = 0;
     var taxRate = 0;
@@ -42,7 +42,6 @@ function processOrderFields() {
         $('#cart-wine > .item').each(function(index, currentElement)
         {
 
-
             var bottleCount = parseInt($(currentElement).find('input').val(),10);
 
             var currentPrice = getNumericValueFromSelectedElement($(currentElement).find('span'))
@@ -57,22 +56,25 @@ function processOrderFields() {
         console.log(totalBottleCount);
         console.log(total);
 
-        $.when(getTax(taxjsonLocation,stateDropDownValue.val())).done(function()
+        $.when(getTax(taxJsonLocation,stateDropDownValue.val())).done(function()
         {
-            console.log(taxRate);
 
+            console.log(taxRate);
+            calculateTotal(totalBottleCount, shippingType, taxRate, total);
         });
     }
 
 
 }
 
-function calculateTotal(bottleCount, shippingType, tax, totalExTax ) {
+function calculateTotal(bottleCount, shippingElement, tax, totalExTax ) {
 
 
     var totalBottles = "Total Bottles: " + bottleCount;
-    var shippingCostPerBottle = 0;
-    var totalShipping = "TotalShipping: " + (bottleCount * 1);
+    var shippingCostPerBottle =  getNumericValueFromSelectedElement(shippingElement);
+    var totalShipping = "TotalShipping: " + (bottleCount * shippingCostPerBottle);
+
+    console.log(totalShipping);
 
 }
 
