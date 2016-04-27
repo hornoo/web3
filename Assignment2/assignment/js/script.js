@@ -21,7 +21,9 @@ $(document).ready(function(){
 
 function processOrderFields() {
 
-    var stateDropDownValue = $('#s-state');
+
+    var stateDropDownElement = $('#s-state');
+    var stateDropDownValue = stateDropDownElement.val();
     var emailInput = $('#email');
     var shippingType = $('input:radio[name=r_method]:checked').next();
     var totalBottleCount = 0;
@@ -29,7 +31,7 @@ function processOrderFields() {
     var taxRate = 0;
 
 
-    if(!TextFieldInputOk(stateDropDownValue))
+    if(!TextFieldInputOk(stateDropDownElement))
     {
         alert("Please choose your shipping State.")
         return false;
@@ -56,26 +58,35 @@ function processOrderFields() {
         console.log(totalBottleCount);
         console.log(total);
 
-        $.when(getTax(taxJsonLocation,stateDropDownValue.val())).done(function()
+        $.when(getTax(taxJsonLocation)).done(function(data)
         {
+            taxRate = data[stateDropDownValue];
 
             console.log(taxRate);
-            calculateTotal(totalBottleCount, shippingType, taxRate, total);
+            calculateTotal(totalBottleCount, shippingType, taxRate, stateDropDownValue, total);
         });
     }
 
 
 }
 
-function calculateTotal(bottleCount, shippingElement, tax, totalExTax ) {
+function calculateTotal(bottleCount, shippingElement, tax, taxState, totalExTax ) {
 
 
-    var totalBottles = "Total Bottles: " + bottleCount;
+
     var shippingCostPerBottle =  getNumericValueFromSelectedElement(shippingElement);
-    var totalShipping = "TotalShipping: " + (bottleCount * shippingCostPerBottle);
+    var totalShippingValue = (bottleCount * shippingCostPerBottle);
 
-    console.log(totalShipping);
+    var totalBottlesString = "Total Bottles: " + bottleCount;
+    var totalShippingString = "TotalShipping: $" + totalShippingValue;
+    var taxString = "Tax: " + (tax * 100) + "% (" +taxState + ")";
 
+    var estimateTotal = totalExTax + totalShippingValue + (totalExTax * tax);
+
+    console.log(estimateTotal);
+    console.log(totalBottlesString);
+    console.log(totalShippingString);
+    console.log(taxString);
 }
 
 
@@ -84,21 +95,19 @@ function getNumericValueFromSelectedElement(inputElement)
     var extractedNumber = inputElement.text();
 
         extractedNumber = extractedNumber.match(/[\d]+/);
-
-        extractedNumber = parseInt(extractedNumber[0],10);
-
+        if(extractedNumber == null) {
+            extractedNumber = 0;
+        }else {
+            extractedNumber = parseInt(extractedNumber[0], 10);
+        }
 
     return extractedNumber;
 }
 
-function getTax(jsonAddress, taxLocation) {
+function getTax(jsonAddress) {
 
 
-    return $.getJSON({url:jsonAddress, success: function(taxRates)
-            {
-                taxRate = taxRates[taxLocation];
-
-            }, error: function(xhr,status,error) {
+    return $.getJSON({url:jsonAddress, error: function(xhr,status,error) {
 
                 alert("There was a issue contacting the server to get the correct tax rate, please try again later. Status: " + status);
             }
