@@ -5,7 +5,6 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, generics, permissions
 from django.contrib.auth.models import User
-from .pagination import PageNationLimit
 
 class BookList(APIView):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
@@ -14,7 +13,6 @@ class BookList(APIView):
     """
     def get(self, request, format=None):
         books = Book.objects.all()
-        pagination_class = PageNationLimit
         serializer = BookSerializer(books, many=True)
         return Response(serializer.data)
 
